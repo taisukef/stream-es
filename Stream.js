@@ -11,7 +11,7 @@ class Stream {
     } else {
       this.data[name].push(f);
     }
-    console.log("on", name, this.data[name]);
+    //console.log("on", name, this.data[name]);
   }
   once(name, f) {
     const a = this.dataonce[name];
@@ -20,7 +20,7 @@ class Stream {
     } else {
       this.dataonce[name].push(f);
     }
-    console.log("once", name, this.dataonce[name]);
+    //console.log("once", name, this.dataonce[name]);
   }
   emit(name, data) {
     const a = this.data[name];
@@ -32,7 +32,7 @@ class Stream {
       aonce.forEach(f => f(data));
       this.dataonce = {};
     }
-    console.log("emit", name, data);
+    //console.log("emit", name, data);
   }
 };
 
